@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholarship Finder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Scholarship Finder</h1>
+    
+    <div class="profile-form">
+      <h2>Student Profile</h2>
+      <form id="profileForm">
+        <div class="form-group">
+          <label for="course">Course of Study:</label>
+          <input type="text" id="course" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="gpa">Current GPA:</label>
+          <input type="number" id="gpa" min="0" max="4" step="0.1" required>
+        </div>
+        
+        <div class="form-group">
+          <label for="location">Location:</label>
+          <select id="location" required>
+            <option value="US">United States</option>
+            <option value="UK">United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="All">Anywhere</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label>Special Criteria (select all that apply):</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="specialCriteria" value="minority"> Minority Status</label>
+            <label><input type="checkbox" name="specialCriteria" value="firstGen"> First Generation Student</label>
+            <label><input type="checkbox" name="specialCriteria" value="disability"> Disability</label>
+            <label><input type="checkbox" name="specialCriteria" value="veteran"> Military Veteran</label>
+          </div>
+        </div>
+        
+        <button type="submit">Find Scholarships</button>
+      </form>
+    </div>
+    
+    <div id="results" class="results-container"></div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
